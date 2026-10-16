@@ -34,7 +34,7 @@ def test_column_of_all_missing_values():
     summary = ci_course.summarise(np.array([np.nan, np.nan]))
 
     assert summary["n"] == 0
-    assert summary["mean"] is np.nan
-    assert summary["sd"] is np.nan
-    assert summary["min"] is np.nan
-    assert summary["max"] is np.nan
+    assert np.isnan(summary["mean"])
+    assert np.isnan(summary["sd"])
+    assert np.isnan(summary["min"])
+    assert np.isnan(summary["max"])
