@@ -12,6 +12,7 @@ license-files = ["LICENSE"]
 requires-python = ">=3.12"
 dependencies = [
     "numpy",
+    "pytest>=9.1.1",
 ]
 
 [project.optional-dependencies]
@@ -30,6 +31,9 @@ ci-course = "ci_course.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+ci_course = ["data/*.csv"]
 
 [tool.ruff]
 line-length = 120
