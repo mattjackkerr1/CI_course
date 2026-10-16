@@ -36,4 +36,3 @@ def test_unparseable_values_are_recorded(tmp_path):
 
     assert np.isnan(data["height_m"][1])
     assert len(errors) == 1
-    
